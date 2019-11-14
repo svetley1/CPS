@@ -1,0 +1,205 @@
+.btn {
+  @include btn-reset;
+  text-decoration: none;
+  flex-shrink: 0;
+
+
+  &--circle {
+    display: flex;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    &:before {
+      content: '';
+      background-color: #FF3E79;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      &:before {
+        background-color: rgb(206, 50, 96);
+      }
+    }
+
+    &--light {
+      &::before {
+        border: 1px solid #FF3E79;
+        background-color: transparent;
+        background-size: 7.5px 12px;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: #FF3E79;
+          background-image: url('../img/arrow-right-white.svg');
+        }
+      }
+    }
+  }
+
+  &--icon {
+    &--menu:before {
+      background-image: url("../img/menu.svg");
+    }
+
+    &--close:before {
+      background-image: url("../img/close.svg");
+    }
+
+    &--search:before {
+      background-image: url("../img/search.svg");
+    }
+
+    &--call:before {
+      background-image: url("../img/call.svg");
+    }
+
+    &--message:before {
+      background-image: url("../img/message.svg");
+    }
+
+    &--user:before {
+      background-image: url("../img/user.svg");
+    }
+
+    &--tools:before {
+      background-image: url("../img/tools.svg");
+    }
+
+    &--status:before {
+      background-image: url("../img/status.svg");
+    }
+
+    &--arrow-right-pink:before {
+      background-image: url('../img/arrow-right-pink.svg');
+    }
+  }
+
+  &--line {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: 500;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      vertical-align: middle;
+    }
+
+    &--get::after {
+      margin-left: 8px;
+      width: 0.4em;
+      height: 1em;
+      background-image: url('../img/arrow-right-pink.svg');
+    }
+
+    &--more::before {
+      content: '';
+      margin-left: 8px;
+      margin-right: 16px;
+      width: 0.5em;
+      height: 1em;
+      background-image: url('../img/all.svg');
+    }
+
+    &--less::before {
+      content: '';
+      margin-left: 8px;
+      margin-right: 16px;
+      width: 0.5em;
+      height: 1em;
+      background-image: url('../img/all.svg');
+      transform: rotateZ(180deg);
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  &--classic {
+    display: flex;
+    align-items: center;
+    background: #FF3E79;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 8px 10px;
+    position: relative;
+    padding-right: 25px;
+
+    &::before {
+      content: '';
+      width: 0.7em;
+      height: 1em;
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      vertical-align: middle;
+      flex-shrink: 0;
+      order: 1;
+      background-image: url('../img/arrow-right-white.svg');
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: rgb(206, 50, 96);
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .btn {
+    &--circle--text {
+      width: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    &--circle--text .btn__text {
+      order: -1;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      margin-right: 8px;
+      color: #1B1C21;
+      font-weight: 500;
+    }
+
+    &--circle--text:hover .btn__text {
+      text-decoration: underline;
+    }
+  }
+}

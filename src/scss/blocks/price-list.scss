@@ -1,0 +1,128 @@
+.price-list {
+  overflow: hidden;
+}
+
+.price-list__list {
+  @include list-reset;
+  display: flex;
+  overflow: visible;
+}
+
+@media (min-width: $tablet) {
+  .price-list__list {
+    flex-direction: column;
+  }
+}
+
+.price-list__item {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  flex-shrink: 0;
+  min-height: 200px;
+
+  &--header {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .price-list__item {
+    flex-wrap: nowrap;
+    min-height: 0;
+    border-radius: 0;
+    align-items: center;
+    width: auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 0;
+      height: 1px;
+      background-color: #EAEAEA;
+    }
+
+    &--header {
+      display: flex;
+      background-color: transparent;
+
+      color: #7E7E82;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.price-list__cell {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  width: 100%;
+
+  &:nth-child(n + 3) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: attr(data-title);
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(126, 126, 130, 0.72);
+    margin-bottom: 4px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .price-list__cell {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+    margin-right: 1%;
+
+    &:nth-last-child(-n + 3) {
+      width: 15%;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .price-list__pagination {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .price-list__btn {
+    min-width: 119px;
+  }
+}

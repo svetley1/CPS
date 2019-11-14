@@ -1,0 +1,18 @@
+.main {
+  display: block;
+  padding: 24px 16px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: $mobile-plus) {
+  .main {
+    padding: 24px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .main {
+    margin-left: calc(50% - 720px + 320px);
+    margin-right: calc(50% - 720px);
+  }
+}

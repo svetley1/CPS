@@ -1,0 +1,28 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field__label-text {
+  display: none;
+}
+
+.field__input,
+.field__textarea {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 16px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  display: block;
+  resize: vertical;
+  overflow: auto;
+  font-family: inherit;
+
+  &::placeholder {
+    color: #B5B6BC;
+  }
+}

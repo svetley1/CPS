@@ -1,0 +1,20 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form__field {
+  margin-bottom: 16px;
+}
+
+.contact-form__agreement {
+  margin-bottom: 23px;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.contact-form__btn {
+  width: 136px;
+  align-self: flex-end;
+  padding-left: 16px;
+}

@@ -1,0 +1,37 @@
+@mixin list-reset() {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin btn-reset() {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin cancel-visually-hidden {
+  position: initial;
+  overflow: initial;
+  clip: initial;
+  height: initial;
+  width: initial;
+  margin: initial;
+  padding: initial;
+  border: initial;
+}

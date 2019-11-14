@@ -1,0 +1,30 @@
+.swiper-slider {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  overflow: visible;
+}
+
+.swiper-pagination {
+  position: static;
+  padding-top: 16px;
+  display: block;
+  line-height: 12px;
+}
+
+.swiper-pagination-bullet {
+  width: 1em;
+  height: 1em;
+  background-color: #dddddd;
+  opacity: 1;
+  margin: 0 6px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+}
