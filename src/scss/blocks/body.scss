@@ -25,3 +25,21 @@
     }
   }
 }
+
+
+.body__container {}
+
+@media (min-width: $desktop) {
+  .body__container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop) {
+  .body__container-content {
+    width: calc(100% - 320px);
+  }
+}

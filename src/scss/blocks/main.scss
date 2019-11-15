@@ -11,8 +11,60 @@
 }
 
 @media (min-width: $desktop) {
-  .main {
-    margin-left: calc(50% - 720px + 320px);
-    margin-right: calc(50% - 720px);
+  .main {}
+}
+
+.main__title {
+  margin-bottom: 24px;
+}
+
+@media (min-width: $tablet) {
+  .main__title {
+    margin-bottom: 32px;
   }
 }
+
+.main__nav {
+  margin-bottom: 24px;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+@media (min-width: $mobile-plus) {
+  .main__nav {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .main__nav {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .main__nav {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.main__footer {
+  padding-right: 8px;
+}
+
+@media (min-width: $tablet) {
+  .main__footer {
+    padding-right: 0;
+    max-width: 421px;
+  }
+}
+
+.main__footer-p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.main__footer-link {}

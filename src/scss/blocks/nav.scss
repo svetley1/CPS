@@ -41,8 +41,9 @@
     box-shadow: none;
     transform: translateX(0);
     transition: none;
-    position: fixed;
-    left: calc(50% - 720px);
+    position: static; // for IE11
+    position: sticky;
+    z-index: 0;
 
     &:before {
       content: '';

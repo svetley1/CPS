@@ -101,16 +101,26 @@
     display: block;
     margin-bottom: 0;
     width: 100%;
-    margin-right: 1%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-left: 5px;
 
-    &:nth-last-child(-n + 3) {
-      width: 15%;
-      flex-grow: 0;
-      flex-shrink: 0;
+    &:nth-child(1) {
+      width: 54%;
+      padding-left: 0;
+      flex-grow: 1;
     }
 
-    &:last-child {
-      margin-right: 0;
+    &:nth-child(2) {
+      width: 14%;
+    }
+
+    &:nth-child(3) {
+      width: 14%;
+    }
+
+    &:nth-child(4) {
+      width: 124px;
     }
 
     &::before {
