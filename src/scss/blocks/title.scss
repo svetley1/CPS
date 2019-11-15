@@ -60,9 +60,16 @@
 
 @media (min-width: $desktop) {
   .title {
+    &--primary {
+      margin-left: -32px;
+      margin-right: -32px;
+    }
+
     &--secondary {
       padding-left: 24px;
       padding-right: 24px;
+      margin-left: -32px;
+      margin-right: -32px;
     }
   }
 }

@@ -11,7 +11,23 @@
 }
 
 @media (min-width: $desktop) {
-  .main {}
+  .main {
+    padding: 42px 32px;
+    position: relative;
+  }
+}
+
+.main__user-menu {
+  display: none;
+}
+
+@media (min-width: $desktop) {
+  .main__user-menu {
+    display: flex;
+    position: absolute;
+    top: 42px;
+    right: 32px;
+  }
 }
 
 .main__title {
@@ -21,6 +37,12 @@
 @media (min-width: $tablet) {
   .main__title {
     margin-bottom: 32px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .main__title {
+    margin-bottom: 8px;
   }
 }
 

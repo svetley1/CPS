@@ -133,10 +133,33 @@
     <div class="body__container-content">
       <main class="main">
         <h1 class="main__title title title--primary">Услуги и сервисы</h1>
+        <ul class="main__user-menu user-menu user-menu--main" aria-hidden="true">
+          <li class="user-menu__item">
+            <a href="#" class="user-menu__link btn btn--circle btn--icon--call js-btn-modal" data-modal="modal--call"
+              data-modal-action="open">Заказать звонок</a>
+          </li>
+          <li class="user-menu__item">
+            <a href="#" class="user-menu__link btn btn--circle btn--icon--message js-btn-modal"
+              data-modal="modal--contacts" data-modal-action="open">Форма обратной связи</a>
+          </li>
+          <li class="user-menu__item">
+            <a href="#" class="user-menu__link btn btn--circle  btn--icon--user">Профиль пользователя</a>
+          </li>
+          <li class="user-menu__item">
+            <a href="#" class="user-menu__link btn btn--circle btn--icon--tools btn--circle--text">
+              <span class="btn__text">Оставить заявку</span>
+            </a>
+          </li>
+          <li class="user-menu__item">
+            <a href="#" class="user-menu__link btn btn--circle btn--icon--status btn--circle--text">
+              <span class="btn__text">Статус ремонта</span>
+            </a>
+          </li>
+        </ul>
         <nav class="main__nav content-nav swiper-slider">
           <ul class="content-nav__list swiper-wrapper">
             <li class="content-nav__item swiper-slide">
-              <a href="#1" class="content-nav__link content-nav__link--active ">Ремонтируемые бренды</a>
+              <a href="#1" class="content-nav__link">Ремонтируемые бренды</a>
             </li>
             <li class="content-nav__item swiper-slide">
               <a href="#2" class="content-nav__link">Ремонтируемые устройства</a>

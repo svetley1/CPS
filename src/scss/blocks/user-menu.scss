@@ -50,6 +50,16 @@
         display: none;
       }
     }
+
+    &--main {
+      & .user-menu__item:nth-of-type(-n + 3) {
+        display: none;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
   }
 }
 
