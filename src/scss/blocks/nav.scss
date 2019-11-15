@@ -87,6 +87,11 @@
 
 .nav__item {
   display: flex;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .nav__link {
@@ -113,12 +118,20 @@
       content: '';
       position: absolute;
       top: 0;
-      left: -24px;
+      left: -16px;
       height: 100%;
       width: 4px;
       background-color: #41F6D7;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: $mobile-plus) {
+  .nav__link {
+    &--active::before {
+      left: -24px;
     }
   }
 }
