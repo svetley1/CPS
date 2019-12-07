@@ -4,6 +4,24 @@ const MOBILE_WIDTH = 320;
 const MOBILE_PLUS_WIDTH = 360;
 const TABLET_WIDTH = 768;
 const DESKTOP_WIDTH = 1440;
+let SCROLL_WIDTH;
+
+// Узнаем ширину полосы прокрутки
+{
+  let div = document.createElement('div');
+
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+
+  // мы должны вставить элемент в документ, иначе размеры будут равны 0
+  document.body.append(div);
+  SCROLL_WIDTH = div.offsetWidth - div.clientWidth;
+  console.log(SCROLL_WIDTH);
+  div.remove();
+}
+
+// Debounce
 
 const debounce = function (func, wait, immediate) {
   var timeout;
@@ -211,6 +229,7 @@ const debounce = function (func, wait, immediate) {
       delete openedModals[modal];
     }
     body.classList.remove('body--overlay');
+    body.style.paddingRight = null;
   }
 
   document.addEventListener('click', (evt) => {
@@ -227,11 +246,13 @@ const debounce = function (func, wait, immediate) {
         closeAllModals();
         modals[modalName].classList.remove(closeClass);
         body.classList.add('body--overlay');
+        body.style.paddingRight = SCROLL_WIDTH + 'px';
         openedModals[modalName] = closeClass;
       } else if (modalAction === 'close') {
         modals[modalName].classList.add(closeClass);
         if (Object.keys(openedModals).length <= 1) {
           body.classList.remove('body--overlay');
+          body.style.paddingRight = null;
         }
         delete openedModals[modalName];
       }
